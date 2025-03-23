@@ -1,0 +1,7 @@
+{
+  "name": "palisades-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Palisades Real Estate Investment Platform",
+  "main": "index.js",
+  "dependencies": {}
+} 

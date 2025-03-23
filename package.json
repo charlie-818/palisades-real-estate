@@ -8,9 +8,9 @@
     "start": "next start",
     "netlify-dev": "netlify dev",
     "lint": "next lint",
-    "postinstall": "netlify-lambda install && next build",
+    "postinstall": "npm run build",
     "export": "next export",
-    "netlify-build": "npm run build && npm run export"
+    "netlify-build": "next build && cp -R netlify/functions/* functions/"
   },
   "dependencies": {
     "next": "^12.3.0",
@@ -20,8 +20,7 @@
     "web3": "^1.8.0",
     "netlify-identity-widget": "^1.9.2",
     "@netlify/plugin-nextjs": "^4.30.0",
-    "netlify-cli": "^12.0.0",
-    "netlify-lambda": "^2.0.15"
+    "netlify-cli": "^12.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",

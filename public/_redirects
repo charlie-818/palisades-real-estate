@@ -1,0 +1,12 @@
+# Redirects for Netlify hosting with Next.js
+# These complement the netlify.toml configuration
+
+# Next.js asset handling
+/_next/static/*  /_next/static/:splat  200
+/_next/data/*    /_next/data/:splat    200
+
+# API routes
+/api/*  /api/:splat  200
+
+# SPA fallback - ensure clean URLs work
+/*  /index.html  200 

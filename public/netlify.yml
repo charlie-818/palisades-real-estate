@@ -1,0 +1,20 @@
+site_id: your-site-id
+build:
+  base: ""
+  publish: ".next"
+  command: "npm run build"
+  environment:
+    NODE_VERSION: "16"
+    NPM_FLAGS: "--legacy-peer-deps"
+plugins:
+  - package: "@netlify/plugin-nextjs"
+    config:
+      debug: true
+      includeFiles:
+        - ".next/static/**/*"
+        - "public/**/*"
+functions:
+  directory: "netlify/functions"
+  node_bundler: "esbuild"
+identity:
+  enabled: true 
